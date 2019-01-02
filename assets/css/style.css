@@ -1,0 +1,29 @@
+container {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  padding: 10px 0;
+}
+header h1 {
+  width: 6%;
+  padding-top: 13px;
+}
+header h1 a {
+  display: inline-block;
+}
+header h1 a img {
+  width: 100%;
+}
+header .search {
+  width: 60%;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
