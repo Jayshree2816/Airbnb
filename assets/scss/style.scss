@@ -1,7 +1,9 @@
 $borderColor: #dce0e0;
 $textColor: #484848;
 $starColor: #008489;
-$borderborderColor : rgb(235, 235, 235);
+$borderTextColor : rgb(235, 235, 235);
+$buttonColor : rgb(242, 242, 242);
+$textButton : rgb(118, 118, 118);
 
 @mixin  wrapper {
 	width: 91%;
@@ -10,6 +12,13 @@ $borderborderColor : rgb(235, 235, 235);
 @mixin  transform {
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@mixin h2 {
+	font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: $textColor;
 }
 
 body {
@@ -24,8 +33,12 @@ header {
 	display: flex;
 	color : rgb(72, 72, 72);
 	border-bottom: 1px solid #e4e4e4;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: #fff;
 	h1 {
-		width: 2%;
+		width: 1.7%;
 		padding: 24px;
 		a {
 			display: inline-block;
@@ -47,10 +60,10 @@ header {
 			}
 			input {
 				width: 25%;
-    		padding: 15px;
+    		padding: 13px;
     		font-size: 18px;
     		padding-left: 40px;
-    		border: $borderborderColor solid 1px;
+    		border: $borderTextColor solid 1px;
 				border-radius: 4px;
 				box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 				font-weight: 600;
@@ -65,9 +78,10 @@ header {
 		ul {
 			li {
 				display: inline-block;
-				padding: 32px 11px;
+				padding: 29px 13px;
+				margin-right: -4px;
 				&:hover {
-					border-bottom: 2px solid rgb(118, 118, 118)
+					border-bottom: 2px solid $textButton;
 				}
 				a {
 					display: inline-block;
@@ -79,9 +93,133 @@ header {
 	}
 }
 
-.user_search {
-	border-bottom: 1px solid #e4e4e4;
-	.wrapper {
-		@include wrapper;
+main {
+	position: relative;
+	.user_search {
+		width: 15%;
+		float: left;
+		position: fixed;
+		top: 13%;
+		.search_info {
+			padding: 24px;
+			p {
+				margin-top: 16px;
+				margin-bottom: 8px;
+				font-weight: 700;
+				color: $textColor;
+			}
+			button {
+				width: 100%;
+				padding: 10px;
+				background-color: #FFF;
+				border: 1px solid rgb(220, 224, 224);
+				border-radius: 4px;
+				text-align: left;
+				font-size: 15px;
+				color: $textButton;
+				transition: background-color 1s ease-in;
+				&:hover {
+					background-color: $buttonColor ;
+					border-color: $buttonColor ;
+				}
+			}
+		}
+	}
+
+	.explore {
+		width: 85%;
+		float: right;
+		margin-top: 80px;
+		.explore_paris {
+			padding: 50px;
+			h2 {
+				@include h2;
+			}
+			.explore_info {
+				display: inline-block;
+				width: 32%;
+				border: 1px solid rgb(220, 224, 224);
+				border-radius: 4px;
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+				margin-right: 15px;
+				a {
+					text-decoration: none;
+					color: #000;
+					font-weight: 700;
+					.home {
+						width: 100%;	
+					}
+					img {
+						width: 96px;
+						height: 72px;
+					}
+					span {
+						margin-left: 15px;
+						color: $textColor;
+					}
+				}
+			}
+		}
+		.paris_details {
+			padding: 50px;
+			.where_to_stay {
+				.heading {
+					position: relative;
+					h2 {
+						@include h2;
+					}	
+					a {
+						position: absolute;
+						top: 30%;
+						left: 12%;
+						font-size: 18px;
+						color: #000;
+					}
+				}
+				.stay_info {
+					.stay_details {
+						width: 24%;
+    				display: inline-block;
+    				margin-right: 15px;
+    				margin-bottom: 15px;
+						a {
+							display: inline-block;
+							text-decoration: none;
+							color: #000;
+							img {
+								width: 100%;
+								height: 250px;
+								margin-bottom: 10px;
+							}
+							span {
+								font-size: 13px;
+								font-weight: 600;
+							}
+							span ~ span {
+								font-size: 15px;
+								display: block;
+								width: 100%;
+								font-weight: 400;
+								 }
+								.star {
+									display: block;
+									width: 100%;
+									font-size: 10px;
+									i {
+										color : #008489;
+									}
+								}
+							p {
+								font-weight: 700;
+								font-size: 17px;
+							}
+						}
+						&:nth-child(4n) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
 	}
 }
