@@ -1,11 +1,19 @@
 $borderColor: #dce0e0;
 $textColor: #484848;
 $starColor: #008489;
+$borderborderColor : rgb(235, 235, 235);
 
 @mixin  wrapper {
-	width: 80%;
-	max-width: 1200px;
+	width: 91%;
 	margin: 0 auto;  
+}
+@mixin  transform {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 container {
@@ -14,10 +22,11 @@ container {
 
 header {
 	display: flex;
-	padding: 10px 0;
+	color : rgb(72, 72, 72);
+	border-bottom: 1px solid #e4e4e4;
 	h1 {
-		width: 6%;
-		padding-top: 13px;
+		width: 2%;
+		padding: 24px;
 		a {
 			display: inline-block;
 			img {
@@ -26,12 +35,53 @@ header {
 		}
 	}
 	.search {
-		width: 60%;
-	}
-	ul {
-		display: flex;
-		li {
-			display: inline-block;
+		width: 78%;
+		margin: auto 0;
+		label {
+			position: relative;
+			i {
+				position: absolute;
+				@include transform;
+				left: 15px;
+				font-size: 18px;
+			}
+			input {
+				width: 25%;
+    		padding: 15px;
+    		font-size: 18px;
+    		padding-left: 40px;
+    		border: $borderborderColor solid 1px;
+				border-radius: 4px;
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+				font-weight: 600;
+				&:active {
+					width: 35%;
+				}
+			}
 		}
+	}
+	nav {	
+		width: 18%;
+		ul {
+			li {
+				display: inline-block;
+				padding: 32px 11px;
+				&:hover {
+					border-bottom: 2px solid rgb(118, 118, 118)
+				}
+				a {
+					display: inline-block;
+					text-decoration: none;
+					color: #000;	
+				}
+			}
+		}
+	}
+}
+
+.user_search {
+	border-bottom: 1px solid #e4e4e4;
+	.wrapper {
+		@include wrapper;
 	}
 }

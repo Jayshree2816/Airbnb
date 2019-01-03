@@ -1,14 +1,19 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 container {
   width: 100%;
 }
 
 header {
   display: flex;
-  padding: 10px 0;
+  color: #484848;
+  border-bottom: 1px solid #e4e4e4;
 }
 header h1 {
-  width: 6%;
-  padding-top: 13px;
+  width: 2%;
+  padding: 24px;
 }
 header h1 a {
   display: inline-block;
@@ -17,13 +22,54 @@ header h1 a img {
   width: 100%;
 }
 header .search {
-  width: 60%;
+  width: 78%;
+  margin: auto 0;
 }
-header ul {
-  display: flex;
+header .search label {
+  position: relative;
 }
-header ul li {
+header .search label i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 18px;
+}
+header .search label input {
+  width: 25%;
+  padding: 15px;
+  font-size: 18px;
+  padding-left: 40px;
+  border: #ebebeb solid 1px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  font-weight: 600;
+}
+header .search label input:active {
+  width: 35%;
+}
+header nav {
+  width: 18%;
+}
+header nav ul li {
   display: inline-block;
+  padding: 32px 11px;
+}
+header nav ul li:hover {
+  border-bottom: 2px solid #767676;
+}
+header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.user_search {
+  border-bottom: 1px solid #e4e4e4;
+}
+.user_search .wrapper {
+  width: 91%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
