@@ -76,7 +76,7 @@ main .user_search {
   width: 15%;
   float: left;
   position: fixed;
-  top: 13%;
+  top: 10%;
 }
 main .user_search .search_info {
   padding: 24px;
@@ -135,6 +135,7 @@ main .explore .explore_paris .explore_info a .home {
 main .explore .explore_paris .explore_info a img {
   width: 96px;
   height: 72px;
+  border-radius: 4px;
 }
 main .explore .explore_paris .explore_info a span {
   margin-left: 15px;
@@ -199,6 +200,15 @@ main .explore .paris_details .where_to_stay .stay_info .stay_details a p {
 }
 main .explore .paris_details .where_to_stay .stay_info .stay_details:nth-child(4n) {
   margin-right: 0;
+}
+main .explore .paris_details .show_all a {
+  color: #008489;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+main .explore .paris_details .show_all a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
