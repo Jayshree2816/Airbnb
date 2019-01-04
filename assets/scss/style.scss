@@ -238,3 +238,46 @@ main {
 		}
 	}
 }
+
+@media screen and (max-width : 1300px )  and (min-width: 1200px) {
+	header {
+		position: static;
+		h1 {
+			width: 2.7%;
+			padding: 24px;
+		}
+		.search {
+			width: 66%;
+			label {
+				input {
+					width: 45%;
+				}
+			}
+		}
+		nav {
+			width: auto;
+			ul {
+				li {
+					padding: 30px 13px;
+				}
+			}
+		}
+	}
+	.main {
+		// position: static;
+		.user_search {
+			width: 100%;
+			// position: static;
+			float: none;
+			.search_info {
+				p {
+					display: none;
+				}
+				button {
+					width: 6%;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

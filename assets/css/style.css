@@ -211,4 +211,38 @@ main .explore .paris_details .show_all a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  header {
+    position: static;
+  }
+  header h1 {
+    width: 2.7%;
+    padding: 24px;
+  }
+  header .search {
+    width: 66%;
+  }
+  header .search label input {
+    width: 45%;
+  }
+  header nav {
+    width: auto;
+  }
+  header nav ul li {
+    padding: 30px 13px;
+  }
+
+  .main .user_search {
+    width: 100%;
+    float: none;
+  }
+  .main .user_search .search_info p {
+    display: none;
+  }
+  .main .user_search .search_info button {
+    width: 6%;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
