@@ -49,9 +49,6 @@ header .search label input {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
   font-weight: 600;
 }
-header .search label input:active {
-  width: 35%;
-}
 header nav {
   width: 18%;
 }
@@ -289,40 +286,6 @@ main .introduction .intro_details .owl-item .intro_info a .star span {
   font-size: 14px;
   display: inline-block;
   width: auto;
-}
-
-@media screen and (max-width: 1300px) and (min-width: 1200px) {
-  header {
-    position: static;
-  }
-  header h1 {
-    width: 2.7%;
-    padding: 24px;
-  }
-  header .search {
-    width: 66%;
-  }
-  header .search label input {
-    width: 45%;
-  }
-  header nav {
-    width: auto;
-  }
-  header nav ul li {
-    padding: 30px 13px;
-  }
-
-  .main .user_search {
-    width: 100%;
-    float: none;
-  }
-  .main .user_search .search_info p {
-    display: none;
-  }
-  .main .user_search .search_info button {
-    width: 6%;
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

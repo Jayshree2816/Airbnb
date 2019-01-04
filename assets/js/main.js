@@ -1,3 +1,9 @@
+$(document).ready( function() {
+	$("input").click( function() {
+		$(this).css({"width" : "35%"});
+	})
+});
+
 $('.owl-carousel').owlCarousel({
 	loop:true,
 	margin:10,
@@ -13,4 +19,5 @@ $('.owl-carousel').owlCarousel({
 					items:5
 			}
 	}
-})
+});
+
